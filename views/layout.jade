@@ -129,7 +129,7 @@ html
                   span.menu-text #{settings.locale.menu_api}
     .col-md-12
       .row.text-center
-        .col-md-2.col-md-offset-1
+        .col-md-4.col-md-offset-1
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
               if settings.nethash_units == 'K'
@@ -151,7 +151,7 @@ html
                label#lblX1  
               else  
                label#hashrate - 
-        .col-md-2.col-xs-4
+        .col-md-4.col-xs-4
           .panel.panel-default
             .panel-heading
               strong #{settings.locale.difficulty}
@@ -162,9 +162,8 @@ html
                label#difficultyHybrid -
               else
                label#difficulty -
-        .col-md-2.col-xs-4
-          img(src='#{settings.logo}', style='margin-top:-15px;height:128px;')
-        .col-md-2
+        
+        .col-md-4
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
               strong #{settings.locale.ex_supply} (#{settings.symbol})
@@ -175,17 +174,7 @@ html
                label#lblX1
               else
                label#supply -  
-        .col-md-2.col-xs-4
-          .panel.panel-default
-            .panel-heading
-              strong #{settings.markets.exchange} Price
-            .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#lastPrice -
-               <br>
-               label#lblX1
-              else
-               label#lastPrice - 
+        
                  
       .row.text-center.hidden-xs(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')      
