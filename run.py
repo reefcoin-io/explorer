@@ -1,3 +1,4 @@
+#python cron job to run the neccessary jobs
 import os
 import time
 
